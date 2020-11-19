@@ -1,0 +1,283 @@
+.page-header {
+  position: relative;
+  border-top: 27px solid #02bab0;
+  background: #00d1c1;
+  padding: 27px 16px;
+
+  .welcome-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+
+    .welcome-logo {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .accounts {
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #ffffff;
+    margin-top: 16px;
+    opacity: 0.8;
+  }
+
+  .card-container {
+    position: absolute;
+    top: 96px;
+    overflow: hidden;
+    width: 37vw;
+
+    @media screen and (max-width: 480px) {
+      width: calc(100vw - 16px);
+    }
+
+    .cards {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > mat-card {
+        background-color: #ffffff;
+        color: #000;
+        padding: 24px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-direction: column;
+        min-width: 262px;
+        margin-right: 16px;
+
+        @media screen and (max-width: 480px) {
+          width: 65vw;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .payment-details {
+          margin-top: 24px;
+          font-family: "Source Sans Pro";
+          flex-direction: column;
+
+          .labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888888;
+            width: 100%;
+          }
+
+          .data {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .amount {
+              font-weight: bold;
+              font-size: 22px;
+            }
+
+            .faq {
+              display: flex;
+              align-self: center;
+
+              .help {
+                margin-right: 9px;
+                fill: #00a699;
+              }
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          background: linear-gradient(90deg, #00d1c1 0%, #00d1dc 100%);
+          color: #fff;
+          margin-top: 14px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+
+        .payment-due {
+          background: #f6f6f6;
+          border: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          border-radius: 5px;
+          font-size: 10px;
+          padding: 12px;
+          white-space: break-spaces;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.primary-link {
+  text-decoration-line: underline;
+  color: #00a699;
+  cursor: pointer;
+}
+
+.section-label {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #888888;
+  box-sizing: border-box;
+}
+
+.recharges-bills {
+  margin-top: 212px;
+  background: #ffffff;
+
+  .recharge-bill-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 28px;
+
+    img {
+      margin: auto;
+    }
+  }
+}
+
+.compatible-apps {
+  margin-top: 16px;
+  background: #ffffff;
+
+  .apps {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    padding: 16px 18px;
+
+    img {
+      margin: auto;
+    }
+  }
+}
+
+.recent-transactions {
+  margin-top: 16px;
+  background-color: #ffffff;
+  margin-bottom: 32px;
+
+  .transaction-records {
+    .transaction {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      padding: 16px;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .transaction-details {
+        flex-direction: column;
+        text-align: left;
+        flex-grow: 1;
+        padding-left: 16px;
+        font-family: "Source Sans Pro";
+
+        .biller {
+          font-weight: 600;
+          font-size: 14px;
+
+          .autopay {
+            margin-left: 14px;
+          }
+        }
+
+        .timestamp {
+          font-size: 12px;
+          line-height: 15px;
+          margin-top: 3px;
+        }
+
+        .comments {
+          font-weight: 600;
+          font-size: 12px;
+          color: #494949;
+          margin-top: 8px;
+
+          .cashback {
+            color: #fe9202;
+          }
+        }
+      }
+
+      .amount {
+        font-family: "Source Sans Pro";
+        font-weight: 600;
+        font-size: 14px;
+        flex-direction: column;
+        text-align: right;
+
+        .processing {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+.menu-bar {
+  background: #ffffff;
+  margin-top: 32px;
+
+  .menu-options {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .option {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      flex-grow: 1;
+      text-align: center;
+
+      img {
+        margin: auto;
+        display: block;
+      }
+
+      .menu-label {
+        font-size: 10px;
+        color: #494949;
+      }
+
+      &:first-of-type {
+        border-top: 2px solid #00d1c1;
+
+        .menu-label {
+          color: #00d1c1;
+        }
+      }
+    }
+  }
+}
